@@ -1,0 +1,2 @@
+# sparkCore_based_pageRank
+用sparkcore实现pageRank算法的网页排序功能
