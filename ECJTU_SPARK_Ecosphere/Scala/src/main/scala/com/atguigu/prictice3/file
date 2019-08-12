@@ -1,0 +1,80 @@
+  // 1
+  //  var ab: ArrayBuffer[Int] = ArrayBuffer[Int]()
+  //  def fun (n:Int)={
+  //    for( i <- 1 to n){
+  //     ab.+=(Random.nextInt(n))
+  //    }
+  //   ab.foreach(println)
+  //  }
+
+  //  fun(5)
+  // 1
+  //  def makeArr(n :Int)= {
+  //   val a: Array[Int] = new Array[Int](n)  // 这样创建预先开辟数组大小 ， 不可变
+  //   val rand = new Random()
+  //   println("============")
+  //   for(i <- a) yield {rand.nextInt(n)}
+  //  }
+  //  val t: Array[Int] = makeArr(5)
+  //  t.foreach(println)
+
+  // 2   相邻的数据元素置换位置 ，使用  0 until(arr.length-1,步长)   , 集合内交换得到是原本数组
+  //  val arr: Array[Int] = Array(1,2,3,4,5)
+  //  def revert(arr:Array[Int]): Unit ={
+  //   for(i <- 0 until(arr.length-1,2)){
+  //    val t = arr(i)
+  //    arr(i) = arr(i+1)
+  //    arr(i+1) = t
+  //   }
+  //  }
+  //  arr.foreach(println)
+  //  println("==========")
+  //  val t: Unit = revert(arr)
+  //  arr.foreach(println)
+  //  println("==========")
+  //  val arr1: Array[Int] =arr.+:(6)
+  //  arr1.foreach(println)
+
+  // 3  选出正数 ，负数 ，0  排序
+  //  val array: Array[Int] = Array(6,2,-3,0,-5,1)
+  //  def sigNumArr(arr:Array[Int]) = {
+  //     val buf = new ArrayBuffer[Int]()
+  //
+  //     buf.++={for (i <- arr if i>0) yield i}
+  //     buf.++={for(i <- arr if i == 0) yield  i}
+  //     buf.++={for(i <- arr if i < 0) yield i}
+  //     buf.toArray
+  //  }
+  //  val arr1: Array[Int] = sigNumArr(array)
+  //   arr1.foreach(println)
+
+  　 //4
+  //  val array: Array[String] = java.util.TimeZone.getAvailableIDs()
+  //  array.filter(elem => elem.substring(0,6).equals("America")).map(elem => elem).foreach(println)
+
+  //  def timeZoneName() ={
+  //   val array: Array[String] = java.util.TimeZone.getAvailableIDs()
+  //    val tmp: Array[String] = {for(i <- array if(i.startsWith("America/"))) yield {
+  //     i.drop("America/".length)
+  //    }
+  //    }
+  //    scala.util.Sorting.quickSort(tmp)
+  //    tmp
+  //  }
+  //
+  //  timeZoneName().foreach(println)
+
+  // 5
+
+//比较器
+//object sort extends Ordering[Int]{
+// implicit override def compare(x: Int, y: Int): Int = {
+//      if(x>y){
+//       return -1
+//      }else if(x<y){
+//       return  1
+//      }else{
+//       return 0
+//      }
+// }
+//}
